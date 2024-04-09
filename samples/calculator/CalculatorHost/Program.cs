@@ -5,4 +5,7 @@ var right = 456;
 var result = OperationsInterop.Add(left, right);
 Console.WriteLine($"{left} + {right} = {result}");
 
-Console.WriteLine(OperationsInterop.ToUpper("Hello, World!"));
+foreach( var item in OperationsInterop.ToUpper(["Hello","World!"]))
+{
+	Console.WriteLine(item);
+}

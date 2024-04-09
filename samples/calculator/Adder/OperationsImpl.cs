@@ -1,4 +1,6 @@
-﻿namespace ComputerWorld.wit.exports.example.calculator;
+﻿
+
+namespace ComputerWorld.wit.exports.example.calculator;
 
 public class OperationsImpl : IOperations
 {
@@ -7,8 +9,8 @@ public class OperationsImpl : IOperations
         return left + right;
     }
 
-    public static string ToUpper(string input)
-    {
-        return input.ToUpperInvariant();
-    }
+	public static List<string> ToUpper(List<string> input)
+	{
+		return input.Select(token => token.ToUpperInvariant()).ToList();
+	}
 }
